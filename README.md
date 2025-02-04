@@ -18,12 +18,30 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://app.travis-ci.com/conda-forge/libnvpl-blas-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/libnvpl-blas-feedstock/main.svg?label=Linux">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23601&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvpl-blas-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23601&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libnvpl-blas-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -39,14 +57,14 @@ Current release info
 Installing libnvpl-blas
 =======================
 
-Installing `libnvpl-blas` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libnvpl-blas` from the `conda-forge/label/nvpl_rc` channel can be achieved by adding `conda-forge/label/nvpl_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/nvpl_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libnvpl-blas-dev, libnvpl-blas0` can be installed with `conda`:
+Once the `conda-forge/label/nvpl_rc` channel has been enabled, `libnvpl-blas-dev, libnvpl-blas0` can be installed with `conda`:
 
 ```
 conda install libnvpl-blas-dev libnvpl-blas0
@@ -61,26 +79,26 @@ mamba install libnvpl-blas-dev libnvpl-blas0
 It is possible to list all of the versions of `libnvpl-blas-dev` available on your platform with `conda`:
 
 ```
-conda search libnvpl-blas-dev --channel conda-forge
+conda search libnvpl-blas-dev --channel conda-forge/label/nvpl_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search libnvpl-blas-dev --channel conda-forge
+mamba search libnvpl-blas-dev --channel conda-forge/label/nvpl_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libnvpl-blas-dev --channel conda-forge
+mamba repoquery search libnvpl-blas-dev --channel conda-forge/label/nvpl_rc
 
 # List packages depending on `libnvpl-blas-dev`:
-mamba repoquery whoneeds libnvpl-blas-dev --channel conda-forge
+mamba repoquery whoneeds libnvpl-blas-dev --channel conda-forge/label/nvpl_rc
 
 # List dependencies of `libnvpl-blas-dev`:
-mamba repoquery depends libnvpl-blas-dev --channel conda-forge
+mamba repoquery depends libnvpl-blas-dev --channel conda-forge/label/nvpl_rc
 ```
 
 
