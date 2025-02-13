@@ -12,7 +12,7 @@ source:
   sha256: 6655898327ed36afd0242719075447058c3c89640b5b9bbfeb5af4dd5c101174
 
 build:
-  number: 0
+  number: 1
   # nvpl is only for ARM architecture
   skip: true  # [not aarch64]
   script:
